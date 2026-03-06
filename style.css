@@ -5,9 +5,22 @@ background:#ffd6e7;
 
 display:flex;
 justify-content:center;
-align-items:center;
-
+/* Убираем align-items отсюда - будем управлять через классы */
+  
 height:100vh;
+box-sizing: border-box;
+}
+
+/* Класс для страницы с фото и кнопками (центрирование) */
+body.center-page {
+align-items: center;
+overflow: hidden; /* на главной странице скролл не нужен */
+}
+
+/* Класс для страницы с постами (скролл) */
+body.posts-page {
+align-items: flex-start;
+overflow: hidden; /* body не скроллим */
 }
 
 /* приставка */
@@ -67,6 +80,10 @@ flex-direction:column;
 align-items:center;
 gap:20px;
 padding:20px;
+width: 100%;
+height: 100vh; /* вся высота экрана */
+overflow-y: auto; /* добавляем прокрутку */
+box-sizing: border-box;
 }
 
 .post{
@@ -76,6 +93,7 @@ border-radius:20px;
 box-shadow:0 5px 20px rgba(0,0,0,0.15);
 overflow:hidden;
 text-align:center;
+flex-shrink: 0; /* посты не сжимаются */
 }
 
 .post img{
