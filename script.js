@@ -25,31 +25,32 @@ function yes(){
 
 document.body.innerHTML = `
 
-<h1 style="text-align:center;margin-top:20px;">С 8 Марта ❤️</h1>
-
 <div class="feed">
 
 <div class="post">
 <img src="images/photo1.jpg">
-<p>Первый день отпуска 😎</p>
-<button onclick="like(this)">❤️ <span>0</span></button>
+<p>С 8 Марта, моё солнышко! 🌷 Пусть каждый день дарит тебе улыбки и приятные сюрпризы. Ты самая красивая, самая добрая и самая любимая. Оставайся всегда такой же замечательной! Люблю тебя сильно сильно❤️</p>
+<button onclick="like(this)">❤️ <span>159</span></button>
 </div>
 
 <div class="post">
 <img src="images/photo2.jpg">
-<p>Собираем чемоданы 🧳</p>
-<button onclick="like(this)">❤️ <span>0</span></button>
+<p>А также жди сегодня подарок к 13:00🌷</p>
+<button onclick="like(this)">❤️ <span>105</span></button>
 </div>
 
 <div class="post">
 <img src="images/photo3.jpg">
-<p>Уже на море 🌊</p>
-<button onclick="like(this)">❤️ <span>0</span></button>
+<p>Лююблю тебя сильно сильно, а также уже сильно по тебе соскучился❤️</p>
+<button onclick="like(this)">❤️ <span>59</span></button>
 </div>
 
 </div>
 
 `
+
+// Добавляем класс для страницы с постами
+document.body.classList.add('posts-page');
 }
 
 function like(button){
@@ -67,3 +68,8 @@ button.classList.add("liked")
 button.style.color = "red"
 
 }
+
+// При загрузке страницы добавляем класс center-page для главной
+document.addEventListener('DOMContentLoaded', function() {
+document.body.classList.add('center-page');
+});
