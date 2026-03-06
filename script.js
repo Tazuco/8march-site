@@ -41,7 +41,7 @@ document.body.innerHTML = `
 
 <div class="post">
 <img src="images/photo3.jpg">
-<p>Лююблю тебя сильно сильно, а также уже сильно по тебе соскучился❤️</p>
+<p>Люблю тебя сильно сильно, а также уже сильно по тебе соскучился❤️</p>
 <button onclick="like(this)">❤️ <span>59</span></button>
 </div>
 
@@ -73,3 +73,4 @@ button.style.color = "red"
 document.addEventListener('DOMContentLoaded', function() {
 document.body.classList.add('center-page');
 });
+
